@@ -10,15 +10,15 @@ set :public_dir, Proc.new { File.join(root, "_site") }
 post '/send_email' do
   res = Pony.mail(
     :from => params[:name] + "<" + params[:email] + ">",
-    :to => 'comm@athenswomenintech.com',
+    :to => 'jtjobe@gmail.com',
     :subject => "Contact from website",
     :body => params[:message],
     :via => :smtp,
     :via_options => {
       :address              => 'smtp.mandrillapp.com',
       :port                 => '587',
-      :user_name            => ENV['MANDRILL_USERNAME'],
-      :password             => ENV['MANDRILL_PASSWORD'],
+      :user_name            => ENV['jtjobe@gmail.com'],
+      :password             => ENV['DGKY3mUWJJJKvVBcCUvrPA'],
       :authentication       => :plain,
       :domain               => 'heroku.com'
     })
